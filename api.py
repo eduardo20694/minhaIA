@@ -54,6 +54,11 @@ perguntas_embeddings = modelo_embedding.encode(perguntas) if perguntas else np.a
 def teste():
     return jsonify({"message": "API está funcionando!"})
 
+# Rota GET para a raiz
+@app.route('/', methods=['GET'])
+def raiz():
+    return jsonify({"message": "Bem-vindo à API de Inteligência Artificial!"})
+
 # Rota POST para receber dados
 @app.route('/pergunta', methods=['POST'])
 def pergunta():
@@ -70,4 +75,3 @@ def pergunta():
 
 if __name__ == '__main__':
     app.run(debug=True)
-api
