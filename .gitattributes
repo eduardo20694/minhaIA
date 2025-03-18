@@ -1,0 +1,8 @@
+* text=auto
+*.py eol=lf
+*.sh eol=lf
+env/
+__pycache__/
+*.pyc
+*.db
+git add .gitattributes
